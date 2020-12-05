@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    background-color: forestgreen;
+}
+
+fieldset {
+    background-color: white;
+    padding: 25px;
+    text-align: left;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.letterButton:hover {
+    background-color: red;
+    color: white;
+}
+#holidayTooltip #holidayTip {
+    visibility: hidden;
+    width: 250px;
+    background-color: #1b881b;;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 11pt;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+#holidayTooltip:hover #holidayTip {
+    visibility: visible;
+}

@@ -26,14 +26,16 @@ $(document).ready(function () {
         "Comfort",
         "Warmth"]
     window.onload= Hangman
+    var wrongGuesses = 0
+    $("#wrongGuesses").text("Wrong Guesses: " + wrongGuesses)
     function Hangman(event) {
         event.preventDefault()
-        var wrongGuesses = 0
+
         var randomNumber = Math.floor(Math.random() * 17)
         var randomWord = dictionary[randomNumber]
         var wordArray = randomWord.split('')
         var gameArray = []
-        $("#wrongGuesses").text("Wrong Guesses: " + wrongGuesses)
+
         for (var i = 0; i < wordArray.length; i++) {
             gameArray.push("-")
         }

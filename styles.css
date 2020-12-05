@@ -20,7 +20,7 @@ legend {
 #holidayTooltip #holidayTip {
     visibility: hidden;
     width: 250px;
-    background-color: #1b881b;;
+    background-color: red;
     color: #fff;
     text-align: center;
     padding: 5px 0;
@@ -32,4 +32,45 @@ legend {
 }
 #holidayTooltip:hover #holidayTip {
     visibility: visible;
+}
+#jail{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#head{
+    position: absolute;
+    top: 25%;
+    left: 47%;
+    display: none;
+}
+#body{
+    position:absolute;
+    top: 42%;
+    left: 49.5%;
+    display: none;
+}
+#rightArm{
+    position:absolute;
+    top: 42%;
+    left: 50%;
+    display: none;
+}
+#leftArm{
+    position:absolute;
+    top: 42%;
+    left: 47%;
+    display: none;
+}
+#rightLeg{
+    position:absolute;
+    top: 69%;
+    left: 49.8%;
+    display: none;
+}
+#leftLeg{
+    position:absolute;
+    top: 69%;
+    left: 46.5%;
+    display: none;
 }

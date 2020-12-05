@@ -24,14 +24,17 @@ $(document).ready(function () {
         "Music",
         "Candles",
         "Comfort",
-        "Warmth"]
+        "Warmth",
+        "Dreidel",
+        "Christmas",
+        "Hanukkah"]
     window.onload= Hangman
     var wrongGuesses = 0
     $("#wrongGuesses").text("Wrong Guesses: " + wrongGuesses)
     function Hangman(event) {
         event.preventDefault()
 
-        var randomNumber = Math.floor(Math.random() * 17)
+        var randomNumber = Math.floor(Math.random() * 20)
         var randomWord = dictionary[randomNumber]
         var wordArray = randomWord.split('')
         var gameArray = []
@@ -47,6 +50,7 @@ $(document).ready(function () {
         function LetterCheck(event) {
             event.preventDefault()
             var selectedLetter = event.target.getAttribute('data-letter')
+            event.target.setAttribute("style","display: none;")
             var index = wordArray.indexOf(selectedLetter)
             wordArray[0] = wordArray[0].toLowerCase()
             if (index !== -1) {
@@ -62,6 +66,26 @@ $(document).ready(function () {
 
             } else {
                 wrongGuesses++
+                switch(wrongGuesses){
+                    case 1:
+                        $("#head").show()
+                        break;
+                    case 2:
+                        $("#body").show()
+                        break;
+                    case 3:
+                        $("#rightLeg").show()
+                        break;
+                    case 4:
+                        $("#leftLeg").show()
+                        break;
+                    case 5:
+                        $("#rightArm").show()
+                        break;
+                    default:
+                        $("#leftArm").show()
+                        break;
+                }
             }
             $("#wrongGuesses").text("Wrong Guesses: " + wrongGuesses)
             $("#theWord").text(gameArray.toString())

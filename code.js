@@ -93,6 +93,7 @@ $(document).ready(function () {
                 var complete;
                 if (wrongGuesses >= 6) {
                     complete = "For the crime of not guessing the right letters, the jury finds you guilty!"
+                    $("#theWord").text(randomWord)
                     $(".letterButton").hide()
                 } else {
                     complete = "You guessed the right letters, the jury finds you not guilty!"

@@ -33,6 +33,22 @@ legend {
 #holidayTooltip:hover #holidayTip {
     visibility: visible;
 }
+#graphics #hintTip{
+    visibility: hidden;
+    width: 250px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 11pt;
+    position: absolute;
+    z-index: 1;
+    left:44%;
+}
+#graphics:hover #hintTip{
+    visibility: visible;
+}
 #jail{
     position: relative;
     top: 0;
